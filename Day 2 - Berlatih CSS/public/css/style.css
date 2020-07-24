@@ -1,0 +1,66 @@
+body {
+    font-family: 'Arial 27px';
+    background-image: url(../img/pattern.jpg);
+}
+
+header {
+    background-color: whitesmoke;
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul {
+    padding-right: 10px;
+}
+
+section {
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: whitesmoke;
+    padding: 20px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+article {
+    border-bottom: 3px solid grey;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    color: turquoise;
+    text-decoration: none;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
