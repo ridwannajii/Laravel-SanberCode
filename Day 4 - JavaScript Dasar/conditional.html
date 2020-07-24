@@ -61,23 +61,25 @@
          var role = document.getElementById("role").value
          // buatlah kondisional berdasarkan dua variabel di atas yaitu name dan role, ketentuannya dapat dibaca di atas
          var output
-         if (name.toLowerCase() == "" && role.toLowerCase() == "") {
-             output = "Nama harus diisi";
-         } else if (name.toLowerCase() == "mikeal" && role.toLowerCase() == "") {
-             output = " Halo " + name + ", Pilih peranmu untuk mulai game!";
-         } else if (name.toLowerCase() == "nina" && role.toLowerCase() == "penyihir") {
-             output = "Selamat datang di Dunia Warewolf " + name + "<br>" + "Halo " + role + name +
-                 ", kamu dapat melihat siapa yang menjadi " + role
-         } else if (name.toLowerCase() == "danu" && role.toLowerCase() == "warewolf") {
-             output = "Selamat datang di Dunia Warewolf " + name + "<br>" + "Halo " + role + " " + name +
-                 ", kamu dapat memilih siapa untuk dimakan malam ini!"
-         } else if (name.toLowerCase() == "zero" && role.toLowerCase() == "rakjel") {
-             output = "Selamat datang di Dunia Warewolf " + name + "<br>" + "Halo " + role + " " + name +
-                 ", Kamu menjadi rakyat jelata"
+         if (name == "") {
+             output = "Nama harus diisi!"
+         } else {
+             if (role.toLowerCase() == "") {
+                 output = "Halo " + name + ", Pilih peranmu untuk memulai game!"
+             } else {
+                 output = "Selamat datang di Dunia Warewolf, " + name + "<br>"
+                 if (role.toLowerCase == "warewolf") {
+                     output += "Halo " + role + " " + name +
+                         ", kamu dapat memilih siapa untuk dimakan malam ini!"
+                 } else if (role.toLowerCase() == "penyihir") {
+                     output += "Halo " + role + " " + name + ", kamu dapat melihat siapa yang menjadi Werewolf!"
+                 } else if (role.toLowerCase() == "rakjel") {
+                     output += "Halo " + name + " " + name + ", Kamu menjadi rakyat jelata"
+                 } else {
+                     output = "Halo " + name + ", Peran tidak ditemukan!"
+                 }
+             }
          }
-
-
-
          var jawabanKonsol = output // = jawaban dari kondisional di-assign di sini
          // Code Sampai sini
 
