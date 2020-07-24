@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+</head>
+
+<body>
+    <h2>Buat Account Baru!</h2>
+    <h3>Sign Up Form</h3>
+    <form action="welcome.html">
+        <label for="fname">First name:</label><br><br>
+        <input type="text" id="fname" name="fname" required><br><br>
+        <label for="lname">Last name:</label><br><br>
+        <input type="text" id="lname" name="lname" required><br><br>
+        <label for="gender">Gender:</label><br><br>
+        <input type="radio" id="male" name="gender" value="male" required>Male<br>
+        <input type="radio" id="female" name="gender" value="female" required>Female<br>
+        <input type="radio" id="other" name="gender" value="other" required>Other<br><br>
+        <label for="nationality">Nationality:</label><br><br>
+        <select id="nationality" name="nationality">
+            <option value="indonesian">Indonesian</option>
+            <option value="malaysian">Malaysian</option>
+            <option value="singapore">Singapore</option>
+            <option value="australia">Australia</option>
+        </select><br><br>
+        <label for="language">Language Spoken:</label><br><br>
+        <input type="checkbox" name="langugage1" id="langugage1" value="Bahasa Indonesia">Bahasa Indonesia<br>
+        <input type="checkbox" name="langugage2" id="langugage2" value="English">English<br>
+        <input type="checkbox" name="langugage3" id="langugage3" value="Other">Other<br><br>
+        <label for="bio">Bio:</label><br>
+        <textarea name="bio" rows="10" cols="30"></textarea><br><br>
+        <button type="submit" name="submit">Sign Up</button>
+        <button type="reset" name="reset">Clear</button>
+    </form>
+
+</body>
+
+</html>
