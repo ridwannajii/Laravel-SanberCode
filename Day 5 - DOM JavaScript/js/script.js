@@ -5,7 +5,7 @@ var items = [
   ['004', 'Mouse Jerry', 30000, 'Mouse yang disukai kucing', 'jerry.jpg']
 ];
 
-
+// release 0
 function dataItems(items) {
   var tampung = "";
   for (var i = 0; i < items.length; i++) {
@@ -16,7 +16,7 @@ function dataItems(items) {
                     <h5 class="card-tittle" id="itemName">${items[i][1]}</h5>
                     <p class="card-text" id="itemDesc">${items[i][3]}</p>
                     <p class="card-text">Rp ${items[i][2]}</p>
-                    <button class="btn btn-primary" id="addCart" >Add To Card</button>
+                    <button class="btn btn-primary" id="addCart" onclick ="tambahItems()">Add To Card</button>
                     </div>
                 </div>
               </div>`
@@ -25,6 +25,7 @@ function dataItems(items) {
 }
 document.getElementById("listBarang").innerHTML = dataItems(items);
 
+// Release 1
 var formSearch = document.getElementById("formItem")
 formSearch.addEventListener("submit", function (Event) {
   Event.preventDefault()
@@ -46,4 +47,14 @@ function filtering(string) {
     }
   }
   return filteredItems
+}
+
+// Release 2
+var cartText = document.getElementById("cart")
+var cartButton = document.getElementById("addCart")
+var cartSum = 0
+
+function tambahItems() {
+  cartSum += 1
+  cartText.innerHTML = '<i class="fas fa-shopping-cart"></i>(' + cartSum + ')'
 }
