@@ -29,6 +29,10 @@
   echo "$first_sentence <br>";
   echo "Panjang String : " . strlen($first_sentence) . "<br>";
   echo "Jumlah Kata : " . str_word_count($first_sentence);
+  echo "<hr>";
+  echo "$second_sentence <br>";
+  echo "Panjang String : " . strlen($second_sentence) . "<br>";
+  echo "Jumlah Kata : " . str_word_count($second_sentence);
 
   echo "<h3> Soal No 2</h3>";
   /* 
