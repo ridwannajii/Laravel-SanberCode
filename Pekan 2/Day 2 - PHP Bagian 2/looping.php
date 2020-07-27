@@ -43,7 +43,18 @@
             2 - I Love PHP
         */
   // Lakukan Looping Di Sini
-
+  echo "LOOPING PERTAMA <br>";
+  for ($i = 2; $i <= 20; $i++) {
+    if ($i % 2 == 0) {
+      echo "$i - I Love PHP <br>";
+    }
+  }
+  echo "<br>LOOPING KEDUA<br>";
+  for ($i = 20; $i >= 2; $i--) {
+    if ($i % 2 == 0) {
+      echo "$i - I Love PHP<br>";
+    }
+  }
 
   echo "<h3>Soal No 2 Looping Array Modulo </h3>";
   /* 
@@ -98,6 +109,12 @@
         */
   echo "Asterix: ";
   echo "<br>";
+  for ($a = 5; $a >= 0; $a--) {
+    for ($a1 = 5; $a1 > $a; $a1--) {
+      echo "*";
+    }
+    echo "<br>";
+  }
   ?>
 
 </body>
