@@ -49,8 +49,17 @@
         */
 
   // Code function di sini 
-  function reverseString()
+  function reverseString($string)
   {
+
+    $hasil = "";
+    $panjang = strlen($string);
+    for ($i = 1; $i <= $panjang; $i++) {
+
+      $hasil .= substr($string, $panjang - $i, 1);
+    }
+
+    echo "$hasil<br>";
   }
 
   // Hapus komentar di bawah ini untuk jalankan Code
@@ -76,12 +85,24 @@
 
 
   // Code function di sini
-
+  function palindrome($kata)
+  {
+    $balik = "";
+    for ($i = strlen($kata) - 1; $i >= 0; $i--) {
+      $balik .= $kata[$i];
+    }
+    if ($balik == $kata) {
+      echo "true" . " ";
+    } else {
+      echo "false" . " ";
+    }
+    return $balik;
+  }
   // Hapus komentar di bawah ini untuk jalankan code
-  // palindrome("civic") ; // true
-  // palindrome("nababan") ; // true
-  // palindrome("jambaban"); // false
-  // palindrome("racecar"); // true
+  echo palindrome("civic") . "<br>"; // true
+  echo palindrome("nababan") . "<br>"; // true
+  echo palindrome("jambaban") . "<br>"; // false
+  echo palindrome("racecar") . "<br>"; // true
   ?>
 </body>
 

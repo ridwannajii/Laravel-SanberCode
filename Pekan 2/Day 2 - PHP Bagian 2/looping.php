@@ -68,9 +68,18 @@
   echo "array numbers: ";
   print_r($numbers);
   // Lakukan Looping di sini
+  // While
+  // $rest = [];
+  // foreach ($numbers as $key => $number) {
+  //   $rest = $number % 5;
+  //   echo "<br>";
+  //   echo "Array sisa baginya adalah: $rest ";
+  //   echo "<br>";
+  // }
+  // Lopping For
   $rest = [];
-  foreach ($numbers as $key => $number) {
-    $rest = $number % 5;
+  for ($i = 0; $i < count($numbers); $i++) {
+    $rest = $numbers[$i] % 5;
     echo "<br>";
     echo "Array sisa baginya adalah: $rest ";
     echo "<br>";
@@ -93,38 +102,24 @@
 
         */
   $items = [
-    [
-      'id' => '001',
-      'name' => 'Keyboard Logitek',
-      'price' => 60000,
-      'description' => 'Keyboard yang mantap untuk kantoran',
-      'source' => 'logitek.jpeg'
-    ],
-    [
-      'id' => '002',
-      'name' => 'Keyboard MSI',
-      'price' => 300000,
-      'description' => 'Keyboard gaming MSI mekanik',
-      'source' => 'msi.jpeg'
-    ],
-    [
-      'id' => '003',
-      'name' => 'Mouse Genius',
-      'price' => 50000,
-      'description' => 'Mouse Genius biar lebih pinter',
-      'source' => 'genius.jpeg'
-    ],
-    [
-      'id' => '004',
-      'name' => 'Mouse Jerry',
-      'price' => 30000,
-      'description' => 'Mouse yang disukai kucing',
-      'source' => 'jerry.jpeg'
-    ],
+    ['001', 'Keyboard Logitek', 60000, 'Keyboard yang mantap untuk kantoran', 'logitek.jpeg'],
+    ['002', 'Keyboard MSI', 300000, 'Keyboard gaming MSI mekanik', 'msi.jpeg'],
+    ['003', 'Mouse Genius', 50000, 'Mouse Genius biar lebih pinter', 'genius.jpeg'],
+    ['004', 'Mouse Jerry', 30000, 'Mouse yang disukai kucing', 'jerry.jpeg']
   ];
   // Output: 
+  $new_items = [];
+  foreach ($items as $item) {
+    $new_items[] = [
+      "id" => $item[0],
+      "name" => $item[1],
+      "price" => $item[2],
+      "description" => $item[3],
+      "source" => $item[4]
+    ];
+  }
   echo "<pre>";
-  print_r($items);
+  print_r($new_items);
   echo "</pre>";
 
   echo "<h3>Soal No 4 Asterix </h3>";
