@@ -23,12 +23,15 @@
         */
 
   // Code function di sini
-
+  function greetings($nama)
+  {
+    echo "Halo $nama, Selamat Datang di Sanbercode!<br>";
+  }
 
   // Hapus komentar untuk menjalankan code!
-  // greetings("Bagas");
-  // greetings("Wahyu");
-  // greetings("Abdul");
+  greetings("Bagas");
+  greetings("Wahyu");
+  greetings("Abdul");
 
   echo "<br>";
 
@@ -46,12 +49,14 @@
         */
 
   // Code function di sini 
-
+  function reverseString()
+  {
+  }
 
   // Hapus komentar di bawah ini untuk jalankan Code
-  // reverseString("abduh");
-  // reverseString("Sanbercode");
-  // reverseString("We Are Sanbers Developers")
+  reverseString("abduh");
+  reverseString("Sanbercode");
+  reverseString("We Are Sanbers Developers");
   echo "<br>";
 
   echo "<h3>Soal No 3 Palindrome </h3>";
