@@ -1,6 +1,20 @@
 <?php
-function skor_terbesar($arr){
-//kode di sini
+function skor_terbesar($arr)
+{
+  //kode di sini
+  $arr_result = [];
+  foreach ($arr as $row) {
+
+    if (array_key_exists($row['kelas'], $arr_result)) {
+      if ($row['nilai'] > $arr_result[$row['kelas']]['nilai']) {
+        $arr_result[$row['kelas']] = $row;
+      }
+    } else {
+      $arr_result[$row['kelas']] = $row;
+    }
+  }
+
+  print_r($arr_result);
 }
 
 // TEST CASES
@@ -31,8 +45,9 @@ $skor = [
     "nilai" => 77
   ],
 ];
-
+echo "<pre>";
 print_r(skor_terbesar($skor));
+echo "</pre>";
 /* OUTPUT
   Array (
     [Laravel] => Array

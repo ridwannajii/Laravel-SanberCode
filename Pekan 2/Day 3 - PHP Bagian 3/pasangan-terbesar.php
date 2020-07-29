@@ -8,7 +8,7 @@ function pasangan_terbesar($angka)
     $data[$a] = substr($angka, $a, 2);
     $nilai[$a] = $data[$a];
   }
-  return "pasangan terbesar : " . max($nilai) . "<br>";
+  return "Pasangan terbesar : " . max($nilai) . "<br>";
 }
 
 // TEST CASES
