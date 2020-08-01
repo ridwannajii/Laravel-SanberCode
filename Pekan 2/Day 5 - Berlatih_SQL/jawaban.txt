@@ -1,0 +1,52 @@
+Ridwan Aji Pamungkas
+//Soal 1 Membuat Database
+CREATE DATABASE myshop;
+
+//Soal 2 Membuat Table di Dalam Database
+CREATE TABLE users (
+    -> id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    -> name VARCHAR(255),
+    -> email VARCHAR(255),
+    -> password VARCHAR(255)
+    -> );
+
+CREATE TABLE categories (
+    -> id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    -> name VARCHAR(255)
+    -> );
+
+create table items (
+    -> id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    -> name varchar(255),
+    -> description varchar(255),
+    -> price int,
+    -> stock int,
+    -> category_id int,
+    -> foreign key (category_id) references categories (id)
+    -> );
+
+//Soal 3 Memasukkan Data pada Table
+INSERT INTO users VALUES ('','John Doe','john@doe.com','john123'),('','Jane Doe','jane@doe.com','jenita123');
+
+INSERT INTO categories VALUES ('','gadget'),
+    -> ('','cloth'),
+    -> ('','men'),
+    -> ('','women'),
+    -> ('','branded');
+
+INSERT INTO items VALUES ('','Sumsang b50','hape keren dari merek sumsang','4000000','100','1'),
+    -> ('','Uniklooh','baju keren dari brand ternama','500000','50','2'),
+    -> ('','IMHO Watch','jam tangan anak yang jujur banget','2000000','10','1');
+
+//Soal 4 Mengambil Data dari Database
+a. Mengambil data users
+SELECT id,name,email FROM users;
+
+b. Mengambil data items
+   -SELECT * FROM items WHERE price > 1000000;
+   -SELECT * FROM items WHERE name LIKE '%sang%';
+
+c. Menampilkan data items join dengan kategori
+ SELECT items.name,description,price,stock,category_id,
+    -> categories.name AS kategori FROM items,
+    -> categories WHERE category_id = categories.id;
