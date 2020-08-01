@@ -50,3 +50,6 @@ c. Menampilkan data items join dengan kategori
  SELECT items.name,description,price,stock,category_id,
     -> categories.name AS kategori FROM items,
     -> categories WHERE category_id = categories.id;
+
+//Soal 5 Mengubah data dari database
+UPDATE items SET price = 2500000 WHERE name LIKE '%sumsang%';
