@@ -47,10 +47,7 @@ b. Mengambil data items
    -SELECT * FROM items WHERE name LIKE '%sang%';
 
 c. Menampilkan data items join dengan kategori
- SELECT items.name,description,price,stock,category_id,
-    -> categories.name AS kategori FROM items,
-    -> categories WHERE category_id = categories.id;
-select items.name, items.description, items.price, items.stock, items.category_id, categories.name as kategori from items inner join categories on items.category_id = categories.id;
+   SELECT items.name, items.description, items.price, items.stock, items.category_id, categories.name as kategori FROM items inner join categories on items.category_id = categories.id;
 
 
 //Soal 5 Mengubah data dari database
