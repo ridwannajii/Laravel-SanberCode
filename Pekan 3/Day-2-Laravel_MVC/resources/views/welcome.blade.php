@@ -9,9 +9,19 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+
     <title>Welcome Pages</title>
 </head>
 <style>
+    html,
+    body {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 200;
+    }
+
     .nav-link {
         text-transform: uppercase;
         margin-right: 30px;
@@ -40,7 +50,7 @@
     <!--- Konten --->
     <div class="container-fluid">
         <h1>
-            Selamat Datang di sanbercode, {{$fname}} {{$lname}}
+            Selamat Datang di sanbercode, {{$firstname}} {{$lastname}}
         </h1>
         <br>
         <h2>Terima kasih telah bergabung di Sanberbook. Social Media kita bersama!</h2>

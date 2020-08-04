@@ -13,8 +13,8 @@ class AuthController extends Controller
 
     public function proses(Request $request)
     {
-        $fname = $request->input('fname');
-        $lname = $request->input('lname');
-        return view('welcome', ['fname' => $fname, 'lname' => $lname]);
+        $fname = $request["fname"];
+        $lname = $request["lname"];
+        return view('welcome', ['firstname' => $fname, 'lastname' => $lname]);
     }
 }

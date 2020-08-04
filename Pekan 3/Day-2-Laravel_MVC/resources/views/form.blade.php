@@ -9,9 +9,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:200&display=swap" rel="stylesheet">
+
     <title>Halaman Registrasi</title>
 </head>
 <style>
+    html,
+    body {
+        font-family: 'Nunito', sans-serif;
+    }
+
     .nav-link {
         text-transform: uppercase;
         margin-right: 30px;
@@ -42,7 +50,8 @@
         <h2>Buat Account Baru!</h2>
         <h3>Sign Up Form</h3>
         <form action="{{ url('/welcome')}}" method="post">
-            <input type="hidden" name="_token" value="<?php echo csrf_token() ?>">
+            <!-- <input type="hidden" name="_token" value="<?php echo csrf_token() ?>"> -->
+            @csrf
             <label for="fname">First name:</label><br>
             <input type="text" id="fname" name="fname" required><br>
             <label for="lname">Last name:</label><br>

@@ -9,9 +9,18 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:500&display=swap" rel="stylesheet">
+
     <title>Sanber Book</title>
 </head>
 <style>
+    html,
+    body {
+        font-family: 'Nunito', sans-serif;
+
+    }
+
     .nav-link {
         text-transform: uppercase;
         margin-right: 30px;
