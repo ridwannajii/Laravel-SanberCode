@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('content')
+<!-- Card Header -->
 <div class="card">
   <div class="card-header">
     <h3 class="card-title">DataTable with default features</h3>
@@ -440,9 +441,15 @@
 </div>
 @endsection
 
-@push('script')
-<script src="../../plugins/datatables/jquery.dataTables.js"></script>
-<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+@push('style')
+<!-- DataTables -->
+<link rel="stylesheet" href="{{asset('/adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
+<link rel="stylesheet" href="{{asset('/adminlte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
+@endpush
+
+@push('scripts')
+<script src="{{asset('/adminlte/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('/adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
 <script>
   $(function() {
     $("#example1").DataTable();
