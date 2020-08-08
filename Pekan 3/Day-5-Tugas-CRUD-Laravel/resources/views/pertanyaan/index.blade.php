@@ -14,12 +14,12 @@
         {{session('success')}}
       </div>
       @endif
-      <a class="btn btn-danger" href="/pertanyaan/create" style="margin-bottom: 1.25rem;">Create New Question</a>
+      <a class="btn btn-danger" href="/pertanyaan/create" style="margin-bottom: 1.25rem;">Buat Pertanyaan Baru</a>
       <thead>
         <tr>
           <th style="width: 30px;">Id</th>
-          <th>Title</th>
-          <th>Content</th>
+          <th>Judul Pertanyaan</th>
+          <th>Isi Pertanyaan</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -30,8 +30,8 @@
           <td>{{$question->judul}}</td>
           <td>{{$question->isi}}</td>
           <td style="display: flex;">
-            <a href="/pertanyaan/{{$question->id}}" class="btn btn-info btn-sm" style="width: 33.33%; margin-right: 10px">show</a>
-            <a href="/pertanyaan/{{$question->id}}/edit" class="btn btn-primary btn-sm" style="width: 33.33%; margin-right: 10px">edit</a>
+            <a href="/pertanyaan/{{$question->id}}" class="btn btn-info btn-sm" style="width: 33.33%; margin-right: 10px">Show</a>
+            <a href="/pertanyaan/{{$question->id}}/edit" class="btn btn-primary btn-sm" style="width: 33.33%; margin-right: 10px">Edit</a>
             <form action="/pertanyaan/{{$question->id}}" method="POST" style="width: 33.33%;">
               @csrf
               @method("DELETE")

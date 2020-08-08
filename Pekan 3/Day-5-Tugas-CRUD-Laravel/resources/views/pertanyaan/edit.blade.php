@@ -13,14 +13,14 @@
     @method('PUT')
     <div class="card-body">
       <div class="form-group">
-        <label for="judul">Title</label>
+        <label for="judul">Judul Pertanyaan</label>
         <input type="text" class="form-control" id="judul" name="judul" value="{{old('judul', $pertanyaan->judul)}}" placeholder="Enter your title">
         @error('judul')
         <div class="alert alert-danger">{{$message}}</div>
         @enderror
       </div>
       <div class="form-group">
-        <label for="isi">Content</label>
+        <label for="isi">Isi Pertanyaan</label>
         <textarea class="form-control" rows="3" id="isi" name="isi" placeholder="Enter your content">{{old('isi', $pertanyaan->isi)}}</textarea>
         @error('isi')
         <div class="alert alert-danger">{{$message}}</div>
