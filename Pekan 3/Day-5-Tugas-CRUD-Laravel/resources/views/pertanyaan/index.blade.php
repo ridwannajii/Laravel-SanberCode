@@ -1,6 +1,15 @@
 @extends('layouts.master')
 @section('title','Daftar Pertanyaan')
 
+@section('style')
+<link rel="stylesheet" href="{{asset('/adminlte/plugins/fontawesome-free/css/all.min.css')}}">
+@endsection
+
+@section('bc')
+<li class="breadcrumb-item active">List Pertanyaan</li>
+<li class="breadcrumb-item active"><a href="{{url('/pertanyaan/create')}}">Pertanyaan Baru</a></li>
+@endsection
+
 @section('content')
 <div class="card">
   <div class="card-header">
