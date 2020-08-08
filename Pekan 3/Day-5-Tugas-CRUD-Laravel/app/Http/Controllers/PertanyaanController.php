@@ -11,19 +11,19 @@ class PertanyaanController extends Controller
     {
         $halaman = 'Pertanyaan';
         $pertanyaan = DB::table('pertanyaan')->get();
-        return view('pertanyaans.index', ['halaman' => $halaman], compact('pertanyaan'));
+        return view('pertanyaan.index', ['halaman' => $halaman], compact('pertanyaan'));
     }
 
     public function create()
     {
         $halaman = "Buat Pertanyaan";
-        return view('pertanyaans.form', ['halaman' => $halaman]);
+        return view('pertanyaan.form', ['halaman' => $halaman]);
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'judul' => 'required|unique:pertanyaans',
+            'judul' => 'required|unique:pertanyaan',
             'isi' => 'required'
         ]);
 
@@ -39,7 +39,7 @@ class PertanyaanController extends Controller
     {
         $halaman = 'Show';
         $pertanyaan = DB::table('pertanyaan')->where('id', $pertanyaan_id)->first();
-        return view('pertanyaans.show', compact('pertanyaan'), ['halaman' => $halaman]);
+        return view('pertanyaan.show', compact('pertanyaan'), ['halaman' => $halaman]);
     }
 
     public function edit($pertanyaan_id)
@@ -52,7 +52,7 @@ class PertanyaanController extends Controller
     public function update($pertanyaan_id, Request $request)
     {
         $request->validate([
-            'judul' => 'required|unique:pertanyaans',
+            'judul' => 'required|unique:pertanyaan',
             'isi' => 'required'
         ]);
 
